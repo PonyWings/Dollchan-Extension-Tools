@@ -4195,7 +4195,7 @@ function showFavoritesWindow(body, favObj) {
 			await $ajax(el.getAttribute('de-url'), null, true).then(xhr => {
 				switch(el.getAttribute('de-host')) { // Makaba doesn't return 404
 				case '2ch.hk':
-				case '2ch.pm': {
+				case '2ch.life': {
 					const dc = $DOM(xhr.responseText);
 					if(dc && $q('.message-title', dc)) {
 						throw new AjaxError(404, 'Error');
@@ -16680,7 +16680,7 @@ function getImageBoard(checkDomains, checkEngines) {
 		}
 	}
 	ibDomains['2ch.hk'] = Makaba;
-	ibDomains['2ch.pm'] = Makaba;
+	ibDomains['2ch.life'] = Makaba;
 	ibDomains['2ch.re'] = Makaba;
 	ibDomains['2ch.wf'] = Makaba;
 
